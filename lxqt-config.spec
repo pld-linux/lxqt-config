@@ -6,7 +6,7 @@
 Summary:	lxqt-config
 Name:		lxqt-config
 Version:	0.10.0
-Release:	0.9
+Release:	1
 License:	GPLv2 and LGPL-2.1+
 Group:		X11/Applications
 Source0:	http://downloads.lxqt.org/lxqt/%{version}/%{name}-%{version}.tar.xz
@@ -48,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%{_sysconfdir}/qt5/menus/lxqt-config.menu
+%{_sysconfdir}/xdg/menus/lxqt-config.menu
 %attr(755,root,root) %{_bindir}/lxqt-config
 %attr(755,root,root) %{_bindir}/lxqt-config-appearance
 %attr(755,root,root) %{_bindir}/lxqt-config-file-associations

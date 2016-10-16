@@ -5,19 +5,19 @@
 
 Summary:	lxqt-config
 Name:		lxqt-config
-Version:	0.10.0
+Version:	0.11.0
 Release:	1
 License:	GPLv2 and LGPL-2.1+
 Group:		X11/Applications
 Source0:	http://downloads.lxqt.org/lxqt/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	b7a338a1348abe27911893ba6f69cbc2
+# Source0-md5:	e50bf87b509ec57281cda154b272392c
 URL:		http://www.lxqt.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Svg-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.3
 BuildRequires:	kp5-libkscreen-devel
-BuildRequires:	liblxqt-devel >= 0.10.0
-BuildRequires:	libqtxdg-devel >= 1.3.0
+BuildRequires:	liblxqt-devel >= 0.11.0
+BuildRequires:	libqtxdg-devel >= 2.0.0
 BuildRequires:	xz-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,6 +31,7 @@ lxqt-config
 install -d build
 cd build
 %cmake \
+	-DPULL_TRANSLATIONS=OFF \
 	../
 
 %{__make}
@@ -41,12 +42,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name} --all-name --with-qm
+#%find_lang %{name} --all-name --with-qm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
 %{_sysconfdir}/xdg/menus/lxqt-config.menu
 %attr(755,root,root) %{_bindir}/lxqt-config
@@ -64,9 +65,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/lxqt-config.desktop
 %{_desktopdir}/lxqt-config-monitor.desktop
 
-%dir %{_datadir}/lxqt/translations/lxqt-config
-%dir %{_datadir}/lxqt/translations/lxqt-config-appearance
-%dir %{_datadir}/lxqt/translations/lxqt-config-cursor
-%dir %{_datadir}/lxqt/translations/lxqt-config-file-associations
-%dir %{_datadir}/lxqt/translations/lxqt-config-input
-%dir %{_datadir}/lxqt/translations/lxqt-config-monitor
+#%dir %{_datadir}/lxqt/translations/lxqt-config
+#%dir %{_datadir}/lxqt/translations/lxqt-config-appearance
+#%dir %{_datadir}/lxqt/translations/lxqt-config-cursor
+#%dir %{_datadir}/lxqt/translations/lxqt-config-file-associations
+#%dir %{_datadir}/lxqt/translations/lxqt-config-input
+#%dir %{_datadir}/lxqt/translations/lxqt-config-monitor
+
+%attr(755,root,root) %{_bindir}/lxqt-config-brightness
+%{_desktopdir}/lxqt-config-brightness.desktop
+%{_iconsdir}/hicolor/48x48/apps/brightnesssettings.svg
+%{_datadir}/lxqt/icons/monitor.svg

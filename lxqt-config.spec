@@ -17,6 +17,7 @@ BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	Qt6Xml-devel >= %{qtver}
 BuildRequires:	cmake >= 3.18.0
+BuildRequires:	kf6-kwindowsystem-devel >= 6.0.0
 BuildRequires:	kp6-libkscreen-devel >= 6.0.0
 BuildRequires:	liblxqt-devel >= 2.3.0
 BuildRequires:	lxqt-menu-data >= 2.0.0

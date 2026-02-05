@@ -7,7 +7,7 @@ Summary:	Config tools for LXQt desktop suite
 Summary(pl.UTF-8):	Narzędzia konfiguracyjne dla środowiska graficznego LXQt
 Name:		lxqt-config
 Version:	2.3.1
-Release:	1
+Release:	2
 License:	GPLv2 and LGPL-2.1+
 Group:		X11/Applications
 Source0:	https://github.com/lxqt/lxqt-config/releases/download/%{version}/%{name}-%{version}.tar.xz

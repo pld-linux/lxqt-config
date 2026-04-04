@@ -6,12 +6,12 @@
 Summary:	Config tools for LXQt desktop suite
 Summary(pl.UTF-8):	Narzędzia konfiguracyjne dla środowiska graficznego LXQt
 Name:		lxqt-config
-Version:	2.3.1
-Release:	2
+Version:	2.3.2
+Release:	1
 License:	GPLv2 and LGPL-2.1+
 Group:		X11/Applications
 Source0:	https://github.com/lxqt/lxqt-config/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	135b8150f2fe6f0c8f038d684bd8b512
+# Source0-md5:	3ba66407a4b38ce19829a80e9ab6f92a
 URL:		http://www.lxqt.org/
 BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}

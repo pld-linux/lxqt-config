@@ -6,12 +6,12 @@
 Summary:	Config tools for LXQt desktop suite
 Summary(pl.UTF-8):	Narzędzia konfiguracyjne dla środowiska graficznego LXQt
 Name:		lxqt-config
-Version:	2.3.2
-Release:	2
+Version:	2.4.0
+Release:	1
 License:	GPLv2 and LGPL-2.1+
 Group:		X11/Applications
 Source0:	https://github.com/lxqt/lxqt-config/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	3ba66407a4b38ce19829a80e9ab6f92a
+# Source0-md5:	7bb4cc66ce5fc8cd5bc53127643888a1
 URL:		http://www.lxqt.org/
 BuildRequires:	Qt6DBus-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
@@ -19,8 +19,8 @@ BuildRequires:	Qt6Xml-devel >= %{qtver}
 BuildRequires:	cmake >= 3.18.0
 BuildRequires:	kf6-kwindowsystem-devel >= 6.0.0
 BuildRequires:	kp6-libkscreen-devel >= 6.0.0
-BuildRequires:	liblxqt-devel >= 2.3.0
-BuildRequires:	lxqt-menu-data >= 2.0.0
+BuildRequires:	liblxqt-devel >= 2.4.0
+BuildRequires:	lxqt-menu-data >= 2.4.0
 BuildRequires:	qt6-linguist >= %{qtver}
 BuildRequires:	xorg-driver-input-libinput-devel
 BuildRequires:	xorg-lib-libXcursor-devel
